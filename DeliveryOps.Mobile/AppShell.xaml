@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DeliveryOps.Mobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:DeliveryOps.Mobile.Views"
+    xmlns:local="clr-namespace:DeliveryOps.Mobile"
+    Shell.FlyoutBehavior="Disabled"
+    Title="DeliveryOps.Mobile">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:DeliveriesPage}"
+        Route="DeliveriesPage" />
+
+</Shell>

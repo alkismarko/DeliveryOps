@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DeliveryOps.Mobile.Views.DeliveriesPage"
+    Title="Deliveries">
+
+    <Grid
+        Padding="20"
+        RowDefinitions="Auto,*"
+        RowSpacing="20">
+
+        <Button
+            Text="Load Deliveries"
+            Command="{Binding LoadDeliveriesCommand}" />
+
+        <CollectionView
+            Grid.Row="1"
+            ItemsSource="{Binding Deliveries}">
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <Border
+                        Padding="15"
+                        Margin="0,5">
+
+                        <VerticalStackLayout Spacing="5">
+
+                            <Label
+                                Text="{Binding CustomerName}"
+                                FontSize="18"
+                                FontAttributes="Bold" />
+
+                            <Label
+                                Text="{Binding Status}" />
+
+                            <Label
+                                Text="{Binding Priority}" />
+
+                            <Label
+                                Text="{Binding DeliveryDate}" />
+
+                            <Label
+                                Text="{Binding TransportType}" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
