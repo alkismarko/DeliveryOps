@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37614.0 d17.14
+VisualStudioVersion = 17.14.37614.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOps.Domain", "DeliveryOps.Domain\DeliveryOps.Domain.csproj", "{CCC44FC4-AA4C-405C-B3C0-690AA0D41D41}"
 EndProject
@@ -10,6 +10,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOps.Infrastructure", "DeliveryOps.Infrastructure\DeliveryOps.Infrastructure.csproj", "{8D6F998C-4E07-410C-B494-A9EAF680C466}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOps.Mobile", "DeliveryOps.Mobile\DeliveryOps.Mobile.csproj", "{A6DB9D64-E595-4F5E-9CDD-8C3339C0A6E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOps.Api", "DeliveryOps.Api\DeliveryOps.Api.csproj", "{075649FC-5827-41F4-AC63-4B484FB8F10D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DFBA962C-A916-4389-B619-B3A10ACB63BB} = {DFBA962C-A916-4389-B619-B3A10ACB63BB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryOps.Contracts", "DeliveryOps.Contracts\DeliveryOps.Contracts.csproj", "{DFBA962C-A916-4389-B619-B3A10ACB63BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +42,14 @@ Global
 		{A6DB9D64-E595-4F5E-9CDD-8C3339C0A6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6DB9D64-E595-4F5E-9CDD-8C3339C0A6E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6DB9D64-E595-4F5E-9CDD-8C3339C0A6E2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{075649FC-5827-41F4-AC63-4B484FB8F10D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075649FC-5827-41F4-AC63-4B484FB8F10D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075649FC-5827-41F4-AC63-4B484FB8F10D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075649FC-5827-41F4-AC63-4B484FB8F10D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBA962C-A916-4389-B619-B3A10ACB63BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBA962C-A916-4389-B619-B3A10ACB63BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBA962C-A916-4389-B619-B3A10ACB63BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBA962C-A916-4389-B619-B3A10ACB63BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

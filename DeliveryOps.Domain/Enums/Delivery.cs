@@ -16,13 +16,7 @@ public class Delivery
 
     public DeliveryPriority Priority { get; set; }
 
-    public double WeightKg { get; set; }
-
-    public double HeightCm { get; set; }
-
-    public double WidthCm { get; set; }
-
-    public double LengthCm { get; set; }
+    public Product Product { get; set; } = null!;
 
     public PackageSize PackageSize { get; set; }
 

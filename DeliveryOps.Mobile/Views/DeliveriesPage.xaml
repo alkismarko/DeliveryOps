@@ -11,18 +11,24 @@
         RowDefinitions="Auto,*"
         RowSpacing="20">
 
-        <Button
-            Text="Load Deliveries"
-            Command="{Binding LoadDeliveriesCommand}" />
+        <HorizontalStackLayout
+              Spacing="10">
+
+            <Button
+                Text="Refresh"
+                Command="{Binding LoadDeliveriesCommand}" />
+
+            <Button
+                Text="Create Delivery"
+                Command="{Binding OpenCreateDeliveryCommand}" />
+
+        </HorizontalStackLayout>
 
         <CollectionView
             Grid.Row="1"
             ItemsSource="{Binding Deliveries}">
-
             <CollectionView.ItemTemplate>
-
                 <DataTemplate>
-
                     <Border
                         Padding="15"
                         Margin="0,5">
@@ -33,29 +39,28 @@
                                 Text="{Binding CustomerName}"
                                 FontSize="18"
                                 FontAttributes="Bold" />
-
                             <Label
                                 Text="{Binding Status}" />
-
                             <Label
                                 Text="{Binding Priority}" />
-
                             <Label
                                 Text="{Binding DeliveryDate}" />
-
+                            <Label
+                                Text="{Binding TransportType}" />
+                            <Label
+                                Text="{Binding Product.Name}"
+                                FontAttributes="Bold" />
+                            <Label
+                                Text="{Binding Product.Code}" />
+                            <Label
+                                Text="{Binding PackageSize}" />
                             <Label
                                 Text="{Binding TransportType}" />
 
                         </VerticalStackLayout>
-
                     </Border>
-
                 </DataTemplate>
-
             </CollectionView.ItemTemplate>
-
         </CollectionView>
-
     </Grid>
-
 </ContentPage>

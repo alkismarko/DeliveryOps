@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DeliveryOps.Mobile.Views.CreateDeliveryPage"
+    Title="Create Delivery">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="15">
+
+            <Label
+                Text="Create Delivery"
+                FontSize="26"
+                FontAttributes="Bold" />
+
+            <Label Text="Product" />
+
+            <Picker
+                Title="Select product"
+                ItemsSource="{Binding Products}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedProduct}" />
+
+            <Label Text="Customer name" />
+
+            <Entry
+                Placeholder="Customer name"
+                Text="{Binding CustomerName}" />
+
+            <Label Text="Customer phone" />
+
+            <Entry
+                Placeholder="Phone"
+                Keyboard="Telephone"
+                Text="{Binding CustomerPhone}" />
+
+            <Label Text="Delivery date" />
+
+            <DatePicker
+                Date="{Binding DeliveryDate}" />
+
+            <Label Text="Priority" />
+
+            <Picker
+                ItemsSource="{Binding Priorities}"
+                SelectedItem="{Binding SelectedPriority}" />
+
+            <Button
+                Text="Create Delivery"
+                Command="{Binding CreateDeliveryCommand}" />
+
+            <ActivityIndicator
+                IsRunning="{Binding IsLoading}"
+                IsVisible="{Binding IsLoading}" />
+
+            <Label
+                     Text="{Binding ErrorMessage}" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

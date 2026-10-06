@@ -2,12 +2,12 @@ using DeliveryOps.Mobile.ViewModels;
 
 namespace DeliveryOps.Mobile.Views;
 
-public partial class DeliveriesPage : ContentPage
+public partial class CreateDeliveryPage : ContentPage
 {
-    private readonly DeliveriesViewModel _viewModel;
+    private readonly CreateDeliveryViewModel _viewModel;
 
-    public DeliveriesPage(
-        DeliveriesViewModel viewModel)
+    public CreateDeliveryPage(
+        CreateDeliveryViewModel viewModel)
     {
         InitializeComponent();
 
@@ -19,6 +19,6 @@ public partial class DeliveriesPage : ContentPage
     {
         base.OnAppearing();
 
-        await _viewModel.LoadDeliveriesCommand.ExecuteAsync(null);
+        await _viewModel.LoadProductsCommand.ExecuteAsync(null);
     }
 }

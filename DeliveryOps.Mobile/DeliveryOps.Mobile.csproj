@@ -67,17 +67,20 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\DeliveryOps.Application\DeliveryOps.Application.csproj" />
+	  <ProjectReference Include="..\DeliveryOps.Contracts\DeliveryOps.Contracts.csproj" />
 	  <ProjectReference Include="..\DeliveryOps.Domain\DeliveryOps.Domain.csproj" />
 	  <ProjectReference Include="..\DeliveryOps.Infrastructure\DeliveryOps.Infrastructure.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Navigation\" />
 	  <Folder Include="Converters\" />
 	  <Folder Include="Services\" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\CreateDeliveryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\DeliveriesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

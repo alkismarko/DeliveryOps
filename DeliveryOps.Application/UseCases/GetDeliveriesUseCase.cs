@@ -5,16 +5,15 @@ namespace DeliveryOps.Application.UseCases;
 
 public class GetDeliveriesUseCase
 {
-    private readonly IDeliveryService _deliveryService;
-
-    public GetDeliveriesUseCase(IDeliveryService deliveryService)
+    private readonly IDeliveryRepository _deliveryRepository;
+    public GetDeliveriesUseCase(IDeliveryRepository deliveryRepository)
     {
-        _deliveryService = deliveryService;
+        _deliveryRepository = deliveryRepository;
     }
 
     public Task<IReadOnlyCollection<Delivery>> ExecuteAsync(
         CancellationToken cancellationToken = default)
     {
-        return _deliveryService.GetDeliveriesAsync(cancellationToken);
+        return _deliveryRepository.GetAllAsync(cancellationToken);
     }
 }
